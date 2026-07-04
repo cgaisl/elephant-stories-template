@@ -24,7 +24,7 @@ Comprehensible input, i+1: each story is ~90%+ known words with a small controll
 ## Delivery workflow
 
 - **Chat session**: commit story + ledger (+ profile if changed), push directly to `main` — no feature branch, no PR. Then print the full story text in the chat reply followed by the teaching notes; the learner reads in the Claude Code web interface and cannot open files there. The chat message IS the delivery; the repo is the archive.
-- **GitHub issue** (the reader's "ขอ นิทาน ใหม่" button; workflow in `.github/workflows/claude-story.yml`): the issue comment replaces the chat reply — post the full story + teaching notes as ONE complete, self-contained comment, then close the issue. The learner also reads via the reader page, which renders `stories/` live from `main`, so the push itself is a delivery.
+- **GitHub issue** (the reader's "Request new story" button; workflow in `.github/workflows/claude-story.yml`): the issue comment replaces the chat reply — post the full story + teaching notes as ONE complete, self-contained comment, then close the issue. The learner also reads via the reader page, which renders `stories/` live from `main`, so the push itself is a delivery.
 
 ## One-off wishes vs durable preferences
 

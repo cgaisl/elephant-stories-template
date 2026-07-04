@@ -1,5 +1,5 @@
 # Writes a new graded-reader story when a "New story request" issue is opened
-# (the reader's "ขอ นิทาน ใหม่" button opens a prefilled issue that lands here).
+# (the reader's "Request new story" button opens a prefilled issue that lands here).
 # Auth: CLAUDE_CODE_OAUTH_TOKEN repo secret, generated with `claude setup-token`
 # (runs on the Claude subscription, no API key). See SETUP.md.
 
