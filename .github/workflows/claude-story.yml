@@ -42,6 +42,8 @@ jobs:
         with:
           claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
           claude_args: |
+            --model fable
+            --fallback-model opus,sonnet
             --allowedTools "Read,Write,Edit,Glob,Grep,Bash(git:*),Bash(gh issue view:*),Bash(gh issue comment:*),Bash(gh issue close:*)"
           prompt: |
             You are the reading tutor for this Thai graded-reader repo. The learner
@@ -60,7 +62,9 @@ jobs:
                CLAUDE.md instead of the normal flow, then continue from step 6.
             4. Otherwise write the next story in the sequence (next number after
                the highest existing stories/story-NN.md; story-01 if none),
-               obeying every rule in CLAUDE.md and the calibration in PROFILE.md.
+               obeying every rule in CLAUDE.md and the calibration in PROFILE.md
+               (including the <!-- en: … --> title comment and the "## Deep dive"
+               section at the end of the story file).
                Honor the request's wishes for THIS story. Never use a Thai word
                that is neither in VOCABULARY.md nor in the story's declared
                new-word list.
